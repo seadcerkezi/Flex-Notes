@@ -1,0 +1,114 @@
+.main-notes {
+  flex-grow: 1;
+  height: 87vh;
+  overflow-y: scroll;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 1px 4px 0px #00000029;
+
+  .create-notes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 18px;
+
+    .create-button {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #71cf48;
+      width: 13vw;
+      border-radius: 5px;
+      border: none;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 19px;
+      .button-text {
+        flex-grow: 1;
+      }
+      .plus-icon {
+        padding: 10px;
+        border-left: 1px solid lightgray;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .notes-input {
+      display: flex;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #eaeaea;
+      background-color: #fcfcfc;
+      color: #eaeaea;
+
+      input {
+        border: none;
+        outline: none;
+      }
+      input::placeholder {
+        color: #eaeaea;
+        background-color: #fcfcfc;
+        border: none;
+      }
+    }
+  }
+
+  .notes {
+    display: flex;
+    flex-direction: column;
+
+    .single-note {
+      padding: 8px;
+      flex: 1;
+
+      border-bottom: 1px solid #efefef;
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0;
+      }
+      .paragraph {
+        margin: 0;
+        line-height: 21px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: #eff4ff;
+      }
+    }
+
+    .activeNote {
+      background-color: #eff4ff;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-notes {
+    width: 46vw;
+    .create-notes {
+      justify-content: center;
+      flex-direction: column;
+      .create-button {
+        width: 60vw;
+      }
+      .notes-input {
+        width: 60vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 635px) {
+  .main-notes {
+    width: 98vw;
+  }
+}

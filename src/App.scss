@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-color: #f4f5f6;
+  height: 100vh;
+}
+
+.App {
+  .App-notes {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .App {
+    .App-notes {
+      flex-wrap: wrap;
+    }
+  }
+}

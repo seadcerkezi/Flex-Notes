@@ -1,0 +1,19 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2a44;
+  height: 7vh;
+
+  h4 {
+    color: #ffffff;
+    padding-left: 10px;
+    cursor: all-scroll;
+  }
+
+  .close-head {
+    color: #ffffff;
+    padding-right: 10px;
+    font-size: 18px;
+  }
+}

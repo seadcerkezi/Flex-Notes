@@ -1,0 +1,141 @@
+.main-category {
+  width: 17%;
+  height: 87vh;
+  overflow-y: scroll;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 1px 4px 0px #00000029;
+
+  .createbtn {
+    width: 100%;
+
+    .create-category {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #71cf48;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 19px;
+
+      .button-text {
+        flex-grow: 1;
+      }
+      .plus-icon {
+        padding: 10px;
+        border-left: 1px solid lightgray;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .add-category {
+      display: flex;
+      gap: 5px;
+      width: 100%;
+      background-color: #ffffff;
+
+      input {
+        width: 80%;
+        background-color: #f5f5f7;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+
+        input::placeholder {
+          color: #e0e0e1;
+        }
+      }
+
+      .check-button {
+        background-color: #71cf48;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        color: #ffffff;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .close-button {
+        background-color: #fe4c4a;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        color: #ffffff;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+    .category {
+      background-color: #1264a3;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-radius: 5px;
+      color: #ffffff;
+
+      .category-folder {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        .filled-folder {
+          font-size: 18px;
+        }
+        h2 {
+          margin: 0;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+
+      .down-arrow {
+        display: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .activeCategory {
+      background-color: #f8f8fa;
+      color: #323338;
+
+      .right-arrow {
+        display: none;
+      }
+      .down-arrow {
+        display: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-category {
+    width: 43vw;
+  }
+}
+
+@media (max-width: 636px) {
+  .main-category {
+    width: 98vw;
+  }
+}

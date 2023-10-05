@@ -1,0 +1,145 @@
+.main-note {
+  width: 50%;
+  height: 87vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 1px 4px 0px #00000029;
+
+  .exit-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    .exit-button {
+      background-color: #1264a3;
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      padding: 7px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .note-div {
+    display: flex;
+    flex-direction: column;
+
+    .note {
+      display: flex;
+      flex-direction: column;
+
+      .note-input {
+        font-weight: 600;
+        line-height: 21px;
+        padding: 10px;
+        padding-top: 0;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #efefef;
+      }
+
+      .note-textarea {
+        padding: 20px 10px;
+        border: none;
+        outline: none;
+        height: 60vh;
+      }
+    }
+
+    .save-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      .save-button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #71cf48;
+        width: 10vw;
+        border-radius: 5px;
+        border: none;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 19px;
+
+        .button-text {
+          flex-grow: 1;
+        }
+        .check-icon {
+          padding: 10px;
+          border-left: 1px solid #eff4ff;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .delete-button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #fe4c4a;
+        width: 10vw;
+        border-radius: 5px;
+        border: none;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 19px;
+        .button-text {
+          flex-grow: 1;
+        }
+        .delete-icon {
+          padding: 10px;
+          border-left: 1px solid lightgray;
+        }
+
+        &:hover {
+          cursor: context-menu;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-note {
+    width: 98vw;
+    margin-bottom: 10px;
+
+    .note-div {
+      .save-div {
+        padding: 10px;
+        gap: 8px;
+        justify-content: space-evenly;
+        .save-button {
+          width: 45vw;
+        }
+        .delete-button {
+          width: 45vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-note {
+    .note-div {
+      .save-div {
+        .save-button {
+          width: 40vw;
+        }
+        .delete-button {
+          width: 40vw;
+        }
+      }
+    }
+  }
+}
